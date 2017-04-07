@@ -1,9 +1,16 @@
 ## HTML5で書く
+
+2017年度版に変更！！
+
 ``` html
 <!DOCTYPE html>
 ```
 
 ## CSSハックでIE対応
+
+2017/4/7追記
+IE9のサポートもまもなく(執筆時点 2017/4/7)で終わるのでこれもいらなくなりそう。
+
 ``` html
 <!--[if lt IE 7 ]><html class="ie ie6" lang="ja"><![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="ja"><![endif]-->
@@ -48,12 +55,26 @@ body {
 
 ## jQuery対応
 <h3>CDN</h3>
+
+3系使う場合
+
 ``` html
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script> (window.jQuery || document .write('<script src="js/jquery-1.11.2.min.js"><\/script>')); </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.x/jquery.min.js"></script>
+<script> (window.jQuery || document .write('<script src="js/jquery-3.2.x.min.js"><\/script>')); </script>
+```
+
+2系使う場合
+
+``` html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script> (window.jQuery || document .write('<script src="js/jquery-2.2.4.min.js"><\/script>')); </script>
 ```
 
 <h3>IE8以下も対応したい場合</h3>
+
+2017/4/7追記
+これはもういらないと思う。
+
 ``` html
 <!--[if lt IE 9]>
 	<script src="js/html5.js"></script>
@@ -122,10 +143,7 @@ contentinfoは、コンテンツに関する著作権やプライバシー情報
 
 ``` html
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="ja"><![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="ja"><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="ja"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="ja"><!--<![endif]-->
+<html lang="ja">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -160,15 +178,8 @@ contentinfoは、コンテンツに関する著作権やプライバシー情報
 		フッター
 	</footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script> (window.jQuery || document .write('<script src="js/jquery-1.11.2.min.js"><\/script>')); </script>
-
-	<!--[if lt IE 9]>
-		<script src="js/html5.js"></script>
-		<script src="js/IE9.js"></script>
-		<script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.x/jquery.min.js"></script>
+	<script> (window.jQuery || document .write('<script src="js/jquery-3.2.x.min.js"><\/script>')); </script>
 </body>
 </html>
 ```
