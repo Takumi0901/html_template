@@ -90,7 +90,7 @@ role属性(ランドマーク属性)とは、WEBページを構成する要素�
 役割っていうのがややこしいですが、例えばheader要素はページ内に何個あってもいいですよね。もっと具体的にいえばページのheaderとか、コンテンツ(sectionとか)内にあるheaderです。role属性である「banner」を付与することで、ページのheaderだよというように明示的に役割を付与することができます。
 
 
-<h3>header</h3>
+### header
 ``` html
 <header role="banner">
 	<h1>ロゴ</h1>
@@ -98,7 +98,7 @@ role属性(ランドマーク属性)とは、WEBページを構成する要素�
 ```
 bannerはヘッダーを表します。基本的にページ内で1個だけです。
 
-<h3>nav</h3>
+### nav
 ``` html
 <nav role="navigation">
 	グローバルナビ
@@ -108,7 +108,7 @@ navigationはドキュメントや関連するドキュメントのナビゲー�
 
 
 
-<h3>main</h3>
+### main
 ``` html
 <main role="main">
 	メインコンテンツ
@@ -117,7 +117,7 @@ navigationはドキュメントや関連するドキュメントのナビゲー�
 mainはドキュメントのうち主要なコンテンツを示します。ページに 1 つのみ。
 なので、ドキュメントやアプリケーションの body のメインコンテンツを表す、main要素に使うのが適切ですね。
 
-<h3>aside</h3>
+### aside
 ``` html
 <aside role="complementary">
 	サイドコンテンツ
@@ -125,7 +125,7 @@ mainはドキュメントのうち主要なコンテンツを示します。ペ�
 ```
 complementaryはドキュメントを補助する情報を示します。asideが適切だと思います。
 
-<h3>footer</h3>
+### footer
 ``` html
 <footer role="contentinfo">
 	フッター
